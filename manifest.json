@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Terms",
+    "description": "Summarize Terms & Conditions, highlight red flags, explain clauses, and check against your privacy preferences.",
+    "version": "1.1.0",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>",
+        "https://generative.googleapis.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Quick Terms"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "report.html",
+                "report.js",
+                "report.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

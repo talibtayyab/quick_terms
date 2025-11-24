@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quick Terms – Full Report</title>
+    <link rel="stylesheet" href="report.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Quick Terms – Full Report</h1>
+            <button id="print-btn">Save as PDF</button>
+        </header>
+
+        <div id="no-data" class="notice">
+            No recent analysis found. Open a Terms & Conditions page and run Quick Terms first.
+        </div>
+
+        <main id="report" class="hidden">
+            <section>
+                <h2>Page</h2>
+                <p id="r-title"></p>
+                <p id="r-url" class="url"></p>
+                <p id="r-time" class="time"></p>
+            </section>
+
+            <section>
+                <h2>Summary</h2>
+                <p id="r-summary"></p>
+            </section>
+
+            <section>
+                <h2>Red Flags</h2>
+                <ul id="r-red"></ul>
+            </section>
+
+            <section>
+                <h2>Important Points</h2>
+                <ul id="r-points"></ul>
+            </section>
+
+            <section>
+                <h2>Compliance & Violations</h2>
+                <p id="r-compliance"></p>
+                <ul id="r-violations"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+
+</html>

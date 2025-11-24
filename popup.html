@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quick Terms</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Quick Terms</h1>
+            <p class="subtitle">Fast summaries. Safer clicks.</p>
+        </header>
+
+        <div id="status" class="status">Checking current tab...</div>
+
+        <div id="content" class="hidden">
+            <div class="meta">
+                <div id="page-title" class="page-title"></div>
+                <div id="page-url" class="page-url"></div>
+            </div>
+
+            <section>
+                <h2>Summary</h2>
+                <p id="summary"></p>
+            </section>
+
+            <section>
+                <h2>Red Flags</h2>
+                <ul id="red-flags"></ul>
+            </section>
+
+            <section>
+                <h2>Important Points</h2>
+                <ul id="important-points"></ul>
+            </section>
+
+            <section>
+                <h2>Compliance with Your Preferences</h2>
+                <p id="compliance-result"></p>
+                <ul id="violations"></ul>
+            </section>
+
+            <div class="buttons">
+                <button id="highlight-btn">Highlight risky terms</button>
+                <button id="refresh-btn">Regenerate</button>
+            </div>
+
+            <div class="footer-row">
+                <a href="options.html" target="_blank" id="options-link">Preferences</a>
+                <button id="report-btn" class="secondary">Full report / PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

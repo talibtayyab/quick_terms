@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quick Terms Preferences</title>
+    <link rel="stylesheet" href="options.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quick Terms – Preferences</h1>
+
+        <section>
+            <h2>Data Sharing</h2>
+            <label><input type="radio" name="dataSharing" value="never" /> Never allowed</label><br />
+            <label><input type="radio" name="dataSharing" value="consent" /> Allowed with consent</label><br />
+            <label><input type="radio" name="dataSharing" value="always" /> Always allowed</label>
+        </section>
+
+        <section>
+            <h2>Email Sharing</h2>
+            <label><input type="radio" name="emailSharing" value="not_allowed" /> Not allowed</label><br />
+            <label><input type="radio" name="emailSharing" value="allowed" /> Allowed</label>
+        </section>
+
+        <section>
+            <h2>Location Access</h2>
+            <label><input type="radio" name="locationAccess" value="never" /> Never</label><br />
+            <label><input type="radio" name="locationAccess" value="while_using" /> Only while using
+                service</label><br />
+            <label><input type="radio" name="locationAccess" value="always" /> Always</label>
+        </section>
+
+        <section>
+            <h2>Custom Categories</h2>
+            <div id="custom-list"></div>
+            <div class="custom-add">
+                <input id="custom-label" type="text" placeholder="e.g. Phone number sharing" />
+                <button id="add-custom-btn">Add</button>
+            </div>
+        </section>
+
+        <div class="footer">
+            <button id="save-btn">Save</button>
+            <button id="reset-btn" class="secondary">Reset to defaults</button>
+            <span id="status"></span>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
